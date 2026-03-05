@@ -2,6 +2,23 @@
 
 Learning data engineering fundamentals through hands-on implementation of containerized data pipelines.
 
+## Why This Exists
+
+Building foundational knowledge for **Ziddfit** - an all-in-one ecosystem for fitness enthusiasts centered around gym owners (the closest stakeholders to trainers and clients). The goal is to streamline gym operations, eliminate register-based workflows, and create value for the entire fitness community.
+
+### The Onboarding Challenge
+
+Indian gyms maintain member data in physical registers. Onboarding to new tech is hard because years of data exists only on paper.
+
+### The Solution
+
+Learn data pipelines and ingestion workflows to build:
+- OCR-based data extraction from physical registers
+- Automated ingestion pipelines for seamless database migration
+- Frictionless onboarding so gym owners can adopt Ziddfit's platform without manual data entry
+
+This repository is the foundation - understanding how data flows from source to database before building production pipelines for gym onboarding.
+
 ## What This Does
 
 Data ingestion pipeline that fetches data from a URL, processes it with pandas, saves to CSV, and loads into PostgreSQL in chunks to avoid memory issues.
