@@ -19,8 +19,20 @@ def transform(df):
 
     return df
 
+#lets get some summary
+def load(df, output_path):
+    summary = (
+        df.groupby(['category', 'region'])['revenue_after_tax']
+            .sum()
+            .sort_values(ascending=False)
+            .reset_index()
+    )
+    summary.to_csv(output_path, index = False)
+    return summary
+
 
 if __name__ == "__main__":
     csv_df = extract('data/raw_csv_sales.csv')
     df = transform(csv_df)
+    load(df, 'data/sales_summary.csv')
     print(df)
