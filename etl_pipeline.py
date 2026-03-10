@@ -21,6 +21,7 @@ def transform(df):
 
 #lets get some summary
 def load(df, output_path):
+    #it gives the revenue of a region per category
     summary = (
         df.groupby(['category', 'region'])['revenue_after_tax']
             .sum()
